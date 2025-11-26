@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    
+    // Cleanup when leaving the page
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   return (
     <main style={{ maxWidth: '800px', margin: '0 auto', padding: '1rem' }}>
       {/* Banner Image */}
@@ -162,7 +174,7 @@ export default function Home() {
       {/* Footer */}
       <footer style={{ marginTop: '1.5rem', textAlign: 'center', color: 'white' }}>
         <p style={{ textShadow: '2px 2px 0px rgba(0,0,0,0.8)', fontSize: '0.875rem' }}>
-          © 2025 Sienna Curry • Built with Next.js
+          © 2025 Sienna Curry
         </p>
       </footer>
     </main>

@@ -5,7 +5,7 @@ export default function Projects() {
 const projects = [
   {
     title: "siennacurry.me",
-    description: "A detailed description of what this project does, the technologies used, and what you learned from building it.",
+    description: "A personal portfolio website with a retro Y2K/Windows XP-inspired aesthetic. Designed in Figma and built from scratch using React and Next.js, featuring custom CSS styling to recreate the nostalgic look of early 2000s social media profiles. The site showcases my projects, skills, and contact information with a responsive two-column layout. Deployed on Vercel with a custom domain.",
     technologies: ["React", "Next.js", "TailwindCSS, Vercel, Figma"],
     link: "https://github.com/siennacurry/siennacurry-site",
     image: "https://i.imgur.com/MGwhB28.png",
@@ -85,7 +85,7 @@ const projects = [
       {/* Footer */}
       <footer style={{ marginTop: '1.5rem', textAlign: 'center', color: 'white' }}>
         <p style={{ textShadow: '2px 2px 0px rgba(0,0,0,0.8)', fontSize: '0.875rem' }}>
-          © 2025 Sienna Curry • Built with Next.js
+          © 2025 Sienna Curry
         </p>
       </footer>
     </main>
