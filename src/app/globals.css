@@ -1,26 +1,200 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Trebuchet+MS&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --blue-gradient: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 92%, #333 100%);
+  --blue-border: #1B44B8;
+  --panel-shadow: 5px 8px 10px #0006;
+  --beige-bg: #E7E4CF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  cursor: url('https://cur.cursors-4u.net/nature/nat-6/nat584.cur'), auto !important;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://s3.amazonaws.com/depot.pacdudegames.com/spacehey/bliss.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+}
+
+/* Sparkle overlay */
+body::before {
+  background-image: url('https://media3.giphy.com/media/3ohhwoER829Q2hWwx2/giphy.gif?cid=6c09b952e9ldw8bbnxnrlf2wr8q4mjvezqm6jmjk0swzgvf8&rid=giphy.gif&ct=s');
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.2;
+  position: fixed;
+  top: -110%;
+  width: 300%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Panel header styling */
+.panel-header {
+  background: var(--blue-gradient);
+  border: 2px solid var(--blue-border);
+  border-radius: 10px 10px 0 0;
+  padding: 0.5em 1em;
+  color: #FFF;
+  text-shadow: 2px 2px 0 #000;
+  font-weight: bold;
+}
+
+/* Panel body styling */
+.panel-body {
+  background: #FFF;
+  border-left: 2px solid var(--blue-border);
+  border-right: 2px solid var(--blue-border);
+  border-bottom: 2px solid var(--blue-border);
+  padding: 1em;
+}
+
+/* Panel with shadow */
+.panel {
+  box-shadow: var(--panel-shadow);
+  border-radius: 10px 10px 0 0;
+}
+
+/* Beige panel body (for skills/interests) */
+.panel-body-beige {
+  background: var(--beige-bg);
+  border-left: 2px solid var(--blue-border);
+  border-right: 2px solid var(--blue-border);
+  border-bottom: 2px solid var(--blue-border);
+  padding: 1em;
+}
+
+/* Banner image */
+.banner {
+  background-image: url('https://assets.st-note.com/img/1673782458631-cgPcSaG3vf.png');
+  background-position: center top;
+  background-size: cover;
+  border: ridge white 10px;
+  border-radius: 10px;
+  height: 150px;
+  box-shadow: var(--panel-shadow);
+}
+
+/* Profile picture CD case effect */
+.profile-pic-container {
+  position: relative;
+  width: 163px;
+  filter: drop-shadow(0 0 0.25rem gray);
+}
+
+.profile-pic-container::after {
+  content: "";
+  background: url('https://fluorescent-lights.neocities.org/f0rzNHe.png'), 
+              linear-gradient(150deg, rgba(255,255,255,0.4), rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.6));
+  background-size: contain, cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.profile-pic-container::before {
+  content: "";
+  background: url('https://fluorescent-lights.neocities.org/Digital-CD-Disk-Vector-Transparent-PNG.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+  animation: spin 5000ms linear infinite;
+  transition: left ease 0.5s;
+}
+
+.profile-pic-container:hover::before {
+  left: -75px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.profile-pic {
+  width: 163px;
+  height: 160px;
+  object-fit: cover;
+}
+
+/* MSN buddy icon styling */
+.msn-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Monospace text for notepad/about sections */
+.monospace {
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+/* Link styling */
+a {
+  color: #245edb;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #3f8cf3;
+}
+
+/* Button link styling (overrides default link styles) */
+.btn-link {
+  color: #FFF !important;
+  text-decoration: none !important;
+}
+
+.btn-link:hover {
+  color: #FFF !important;
+}
+
+/* Navigation links */
+.nav-link {
+  color: #FFF;
+  text-decoration: none;
+  padding: 0.3em 0.8em;
+  transition: background 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+/* Project card image */
+.project-image {
+  border: ridge white 10px;
+  border-radius: 10px;
+}
+
+/* Skill category styling */
+.skill-category {
+  color: #245edb;
+  font-weight: bold;
+  border-bottom: 2px ridge var(--beige-bg);
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Red accent text */
+.accent-red {
+  color: #c41e3a;
+  font-weight: bold;
 }
