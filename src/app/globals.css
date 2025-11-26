@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url('/images/windows-xp-bliss.jpg');
+  background-image: url('/images/windows-xp-bliss.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -75,7 +75,7 @@ body::before {
 
 /* Banner image */
 .banner {
-  background-image: url('/images/bubble-tree-banner.webp');
+  background-image: url('/images/bubble-tree-banner.png');
   background-position: center top;
   background-size: cover;
   border: ridge white 10px;
