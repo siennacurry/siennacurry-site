@@ -40,7 +40,7 @@ export default function Home() {
                 <div className="profile-pic-container" style={{ flexShrink: 0 }}>
                   {/* Replace this with your actual profile image */}
                   <img 
-                    src="https://img.freepik.com/free-vector/pixelated-earth-planet-clouds_603843-979.jpg" 
+                    src="/images/pixelated-earth-planet-clouds.png" 
                     alt="Sienna's profile picture"
                     className="profile-pic"
                   />
@@ -52,7 +52,7 @@ export default function Home() {
                   <p style={{ fontSize: '0.75rem', color: '#666' }}>CS + Linguistics @ UCLA</p>
                   {/* MSN Buddy Icon */}
                   <img 
-                    src="https://www.flava.co.nz/media/1772223/giphy.gif" 
+                    src="/images/blue-duo-spinning.gif" 
                     alt="MSN icon"
                     className="msn-icon"
                     style={{ marginTop: '0.5rem' }}

@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url('https://s3.amazonaws.com/depot.pacdudegames.com/spacehey/bliss.jpg');
+  background-image: url('/images/windows-xp-bliss.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -26,7 +26,7 @@ body {
 
 /* Sparkle overlay */
 body::before {
-  background-image: url('https://media3.giphy.com/media/3ohhwoER829Q2hWwx2/giphy.gif?cid=6c09b952e9ldw8bbnxnrlf2wr8q4mjvezqm6jmjk0swzgvf8&rid=giphy.gif&ct=s');
+  background-image: url('/images/bubbles-flowing-up.gif');
   content: "";
   height: 300%;
   left: -50%;
@@ -75,7 +75,7 @@ body::before {
 
 /* Banner image */
 .banner {
-  background-image: url('https://assets.st-note.com/img/1673782458631-cgPcSaG3vf.png');
+  background-image: url('/images/bubble-tree-banner.webp');
   background-position: center top;
   background-size: cover;
   border: ridge white 10px;
@@ -93,7 +93,7 @@ body::before {
 
 .profile-pic-container::after {
   content: "";
-  background: url('https://fluorescent-lights.neocities.org/f0rzNHe.png'), 
+  background: url('/images/cd-outline.png'), 
               linear-gradient(150deg, rgba(255,255,255,0.4), rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.6));
   background-size: contain, cover;
   position: absolute;
@@ -106,7 +106,7 @@ body::before {
 
 .profile-pic-container::before {
   content: "";
-  background: url('https://fluorescent-lights.neocities.org/Digital-CD-Disk-Vector-Transparent-PNG.png');
+  background: url('/images/cd.png');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -153,16 +153,6 @@ a {
 
 a:hover {
   color: #3f8cf3;
-}
-
-/* Button link styling (overrides default link styles) */
-.btn-link {
-  color: #FFF !important;
-  text-decoration: none !important;
-}
-
-.btn-link:hover {
-  color: #FFF !important;
 }
 
 /* Navigation links */
