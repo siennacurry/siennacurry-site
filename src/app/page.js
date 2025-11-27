@@ -85,10 +85,12 @@ export default function Home() {
                 <a href="https://github.com/siennacurry" target="_blank" rel="noopener noreferrer">
                   Github
                 </a>
+                {/*
                 {" | "}
                 <a href="/assets/resume-swe-2028.pdf" target="_blank" rel="noopener noreferrer">
                   Resume
                 </a>
+                */}
               </p>
             </div>
           </div>
