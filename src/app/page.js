@@ -80,7 +80,7 @@ export default function Home() {
                   Github
                 </a>
                 {" | "}
-                <a href="https://drive.google.com/file/d/18Chx0UFUg4pNwSe1dQ77PY9fhdDAA8mH/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="/assets/resume-swe-2028.pdf" target="_blank" rel="noopener noreferrer">
                   Resume
                 </a>
               </p>
@@ -97,13 +97,13 @@ export default function Home() {
               <p style={{ marginBottom: '0.5rem', fontSize: '0.75rem' }}>C++, Python, JavaScript, HTML/CSS, SQL</p>
               
               <div className="skill-category">Frameworks</div>
-              <p style={{ marginBottom: '0.5rem', fontSize: '0.75rem' }}>React, Next.js, Node.js, TailwindCSS</p>
+              <p style={{ marginBottom: '0.5rem', fontSize: '0.75rem' }}>React, Next.js, Node.js, Express.js, TailwindCSS, Socket.io</p>
               
               <div className="skill-category">Design</div>
               <p style={{ marginBottom: '0.5rem', fontSize: '0.75rem' }}>Figma, Adobe Creative Suite, UI/UX</p>
               
               <div className="skill-category">Tools</div>
-              <p style={{ fontSize: '0.75rem' }}>Git, VS Code, GitHub Copilot</p>
+              <p style={{ fontSize: '0.75rem' }}>Git, MongoDB, AWS, Azure</p>
             </div>
           </div>
         </div>
@@ -125,8 +125,8 @@ export default function Home() {
                 intersection between people and technology!
               </p>
               <p>
-                When I&apos;m not coding, you can find me learning new languages
-                 or drinking iced tea lattes.
+                When I&apos;m not coding, you can find me learning new languages or
+                logging movies on Letterboxd.
               </p>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function Home() {
                 style={{
                   marginTop: '0.75rem',
                   height: '120px',
-                  backgroundImage: "url('https://pbs.twimg.com/media/GFNsGpKbYAAQSUx.jpg')",
+                  backgroundImage: "url('/images/aero-fish.png')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}

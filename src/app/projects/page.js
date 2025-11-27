@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function Projects() {
-  // You can replace this with your actual projects
+  // Replace this with my actual projects
 const projects = [
   {
     title: "siennacurry.me",

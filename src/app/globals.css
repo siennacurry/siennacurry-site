@@ -95,7 +95,7 @@ body::before {
   content: "";
   background: url('/images/cd-outline.png'), 
               linear-gradient(150deg, rgba(255,255,255,0.4), rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.6));
-  background-size: contain, cover;
+  background-size: 100% 100%, cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -130,8 +130,9 @@ body::before {
 
 .profile-pic {
   width: 163px;
-  height: 160px;
+  height: 163px;
   object-fit: cover;
+  filter: drop-shadow(0 0 0.25rem gray);
 }
 
 /* MSN buddy icon styling */
