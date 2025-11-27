@@ -159,9 +159,11 @@ export default function Home() {
                 <p style={{ fontSize: '0.75rem', color: '#666' }}>TBD</p>
               </div>
 
-              <p style={{ marginTop: '0.75rem' }}>
-                <Link href="/projects" className="accent-red">[View All Projects]</Link>
-              </p>
+                <p style={{ marginTop: '0.75rem' }}>
+                  <Link href="/projects" style={{ fontWeight: 'bold' }}>
+                  [View All Projects]
+                  </Link>
+                </p>
 
               {/* Decorative Image */}
               <div 
