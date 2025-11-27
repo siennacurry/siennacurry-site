@@ -30,12 +30,7 @@ export default function Home() {
       <div className="banner" style={{ marginBottom: '1rem' }}></div>
 
       {/* Two Column Layout */}
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: '1fr 1.1fr', 
-        gap: '1rem',
-        alignItems: 'start'
-      }}>
+      <div className="two-column-grid">
         
         {/* Left Column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

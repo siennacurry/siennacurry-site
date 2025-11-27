@@ -171,7 +171,7 @@ a:hover {
 
 /* Project card image */
 .project-image {
-  border: ridge white 10px;
+  border: ridge rgb(240, 246, 255) 10px;
   border-radius: 10px;
 }
 
@@ -188,4 +188,18 @@ a:hover {
 .accent-red {
   color: #c41e3a;
   font-weight: bold;
+}
+
+/* Responsive two-column layout */
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .two-column-grid {
+    grid-template-columns: 1fr;
+  }
 }

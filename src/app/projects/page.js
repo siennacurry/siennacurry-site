@@ -9,15 +9,15 @@ const projects = [
     technologies: ["React", "Next.js", "TailwindCSS, Vercel, Figma"],
     link: "https://github.com/siennacurry/siennacurry-site",
     image: "https://i.imgur.com/MGwhB28.png",
-    imageWidth: "40%"
+    imageWidth: "50%"
   },
   {
     title: "Upcoming Data Analysis Project", 
     description: "Come back later for more!",
     technologies: ["TBD"],
     link: "https://github.com/siennacurry",
-    image: "https://via.placeholder.com/400x200/3f8cf3/ffffff?text=Project+2",
-    imageWidth: "1000px"
+    image: "https://t3.ftcdn.net/jpg/13/75/00/24/360_F_1375002409_EqrjU2D0FGjW8OrkHretImodxhJ0McFv.jpg",
+    imageWidth: "50%"
   },
 ];
 
