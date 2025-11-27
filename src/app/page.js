@@ -4,12 +4,23 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
+    useEffect(() => {
+    // Hide scrollbar but allow scrolling
+    document.documentElement.style.scrollbarWidth = "none"; // Firefox
+    document.body.style.msOverflowStyle = "none"; // IE/Edge
+    
+    // For Chrome/Safari/Edge
+    const style = document.createElement('style');
+    style.id = 'hide-scrollbar';
+    style.textContent = `html::-webkit-scrollbar { display: none; }`;
+    document.head.appendChild(style);
     
     // Cleanup when leaving the page
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.style.scrollbarWidth = "";
+      document.body.style.msOverflowStyle = "";
+      const styleEl = document.getElementById('hide-scrollbar');
+      if (styleEl) styleEl.remove();
     };
   }, []);
 
