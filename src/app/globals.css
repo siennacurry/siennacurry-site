@@ -14,6 +14,7 @@
 }
 
 body {
+  background-color: #3a7cc3;  /* Matches the sky color */
   background-image: url('/images/windows-xp-bliss.webp');
   background-size: cover;
   background-position: center;
