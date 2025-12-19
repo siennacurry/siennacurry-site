@@ -5,10 +5,6 @@ import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-  // Hide scrollbar but allow scrolling
-  document.documentElement.style.scrollbarWidth = "none"; // Firefox
-  document.body.style.msOverflowStyle = "none"; // IE/Edge
-  
   // For Chrome/Safari/Edge
   const style = document.createElement('style');
   style.id = 'hide-scrollbar';
@@ -94,7 +90,7 @@ export default function Home() {
                 <strong>View my:</strong>{" "}
                 <a href="mailto:siennacurry@ucla.edu">Email</a>
                 {" | "}
-                <a href="https://linkedin.com/in/siennacurry/" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/siennacurry" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
                 {" | "}
