@@ -72,7 +72,7 @@ export default function Home() {
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   <p style={{ fontWeight: 'bold', fontSize: '0.875rem' }}>Sienna Curry</p>
                   <p style={{ fontSize: '0.75rem', color: '#666' }}>CS + Linguistics @ UCLA</p>
-                  {/* MSN Buddy Icon */}
+                {/* MSN Buddy Icon */}
                   <img 
                     src="/images/blue-duo-spinning.gif" 
                     alt="MSN icon"
