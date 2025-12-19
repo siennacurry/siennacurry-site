@@ -24,9 +24,9 @@ body {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 
-/* Sparkle overlay */
-body::before {
-  background-image: url('/images/bubbles-flowing-up.gif');
+/* Sparkle overlay - only shows when body has 'show-bubbles' class */
+body.show-bubbles::before {
+  background-image: url('/images/floating-bubbles.gif');
   content: "";
   height: 300%;
   left: -50%;
@@ -36,6 +36,11 @@ body::before {
   width: 300%;
   pointer-events: none;
   z-index: 1000;
+  transition: opacity 2s ease-out;
+}
+
+body.show-bubbles.fade-out::before {
+  opacity: 0;
 }
 
 /* Panel header styling */
@@ -179,6 +184,10 @@ a:hover {
 .skill-category {
   color: #c41e3a;
   font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.skill-item {
   border-bottom: 2px ridge var(--beige-bg);
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;

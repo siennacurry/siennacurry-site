@@ -4,25 +4,41 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Home() {
-    useEffect(() => {
-    // Hide scrollbar but allow scrolling
-    document.documentElement.style.scrollbarWidth = "none"; // Firefox
-    document.body.style.msOverflowStyle = "none"; // IE/Edge
-    
-    // For Chrome/Safari/Edge
-    const style = document.createElement('style');
-    style.id = 'hide-scrollbar';
-    style.textContent = `html::-webkit-scrollbar { display: none; }`;
-    document.head.appendChild(style);
-    
-    // Cleanup when leaving the page
-    return () => {
-      document.documentElement.style.scrollbarWidth = "";
-      document.body.style.msOverflowStyle = "";
-      const styleEl = document.getElementById('hide-scrollbar');
-      if (styleEl) styleEl.remove();
-    };
-  }, []);
+  useEffect(() => {
+  // Hide scrollbar but allow scrolling
+  document.documentElement.style.scrollbarWidth = "none"; // Firefox
+  document.body.style.msOverflowStyle = "none"; // IE/Edge
+  
+  // For Chrome/Safari/Edge
+  const style = document.createElement('style');
+  style.id = 'hide-scrollbar';
+  style.textContent = `html::-webkit-scrollbar { display: none; }`;
+  document.head.appendChild(style);
+
+  // Show bubbles on load
+  document.body.classList.add('show-bubbles');
+
+  // Start fading out after 10 seconds
+  const fadeTimer = setTimeout(() => {
+    document.body.classList.add('fade-out');
+  }, 3000);
+
+  // Fully remove bubbles after fade completes (10s + 2s fade)
+  const removeTimer = setTimeout(() => {
+    document.body.classList.remove('show-bubbles', 'fade-out');
+  }, 5000);
+  
+  // Cleanup when leaving the page
+  return () => {
+    document.documentElement.style.scrollbarWidth = "";
+    document.body.style.msOverflowStyle = "";
+    const styleEl = document.getElementById('hide-scrollbar');
+    if (styleEl) styleEl.remove();
+    document.body.classList.remove('show-bubbles', 'fade-out');
+    clearTimeout(fadeTimer);
+    clearTimeout(removeTimer);
+  };
+}, []);
 
   return (
     <main style={{ maxWidth: '800px', margin: '0 auto', padding: '1rem' }}>
@@ -38,7 +54,7 @@ export default function Home() {
           {/* Profile Section */}
           <div className="panel">
             <div className="panel-header">
-              <h1 style={{ fontSize: '1rem' }}>Sienna</h1>
+              <h1 style={{ fontSize: '1rem' }}>Welcome!</h1>
             </div>
             <div className="panel-body">
               <div style={{ display: 'flex', gap: '0.75rem' }}>
@@ -54,7 +70,7 @@ export default function Home() {
                 
                 {/* Bio/Tagline */}
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                  <p style={{ fontWeight: 'bold', fontSize: '0.875rem' }}>Welcome to my site!</p>
+                  <p style={{ fontWeight: 'bold', fontSize: '0.875rem' }}>Sienna Curry</p>
                   <p style={{ fontSize: '0.75rem', color: '#666' }}>CS + Linguistics @ UCLA</p>
                   {/* MSN Buddy Icon */}
                   <img 
@@ -95,26 +111,26 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Skills Section */}
-          <div className="panel">
-            <div className="panel-header">
-              <h2 style={{ fontSize: '0.875rem' }}>Skills</h2>
-            </div>
-            <div className="panel-body-beige" style={{ fontSize: '0.875rem' }}>
-              <div className="skill-category">Languages</div>
-              <p style={{ marginBottom: '0.5rem', fontSize: '0.75rem' }}>C++, Python, JavaScript, HTML/CSS, SQL</p>
-              
-              <div className="skill-category">Frameworks</div>
-              <p style={{ marginBottom: '0.5rem', fontSize: '0.75rem' }}>React, Next.js, Node.js, Express.js, TailwindCSS, Socket.io</p>
-              
-              <div className="skill-category">Design</div>
-              <p style={{ marginBottom: '0.5rem', fontSize: '0.75rem' }}>Figma, Adobe Creative Suite, UI/UX</p>
-              
-              <div className="skill-category">Tools</div>
-              <p style={{ fontSize: '0.75rem' }}>Git, MongoDB, AWS, Azure</p>
-            </div>
+        {/* Skills Section */}
+        <div className="panel">
+          <div className="panel-header">
+            <h2 style={{ fontSize: '0.875rem' }}>Skills</h2>
+          </div>
+          <div className="panel-body-beige" style={{ fontSize: '0.875rem' }}>
+            <div className="skill-category">Languages</div>
+            <p className="skill-item" style={{ fontSize: '0.75rem' }}>C++, Python, JavaScript, HTML/CSS, SQL</p>
+            
+            <div className="skill-category">Frameworks</div>
+            <p className="skill-item" style={{ fontSize: '0.75rem' }}>React, Next.js, Node.js, Express.js, NumPy, Pandas, Socket.io</p>
+            
+            <div className="skill-category">Tools</div>
+            <p className="skill-item" style={{ fontSize: '0.75rem' }}>MongoDB, PostgreSQL, Git, AWS, Azure, Vercel, RESTful APIs</p>
+            
+            <div className="skill-category">Design</div>
+            <p style={{ fontSize: '0.75rem' }}>Figma, Adobe Creative Suite, UI/UX</p>
           </div>
         </div>
+      </div>
 
         {/* Right Column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
