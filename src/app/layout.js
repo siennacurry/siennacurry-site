@@ -8,6 +8,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/images/windows-xp-bliss.webp"
+          as="image"
+        />
+      </head>
       <body className="min-h-screen p-4 md:p-8">
         {children}
       </body>

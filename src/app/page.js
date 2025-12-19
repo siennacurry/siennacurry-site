@@ -62,7 +62,7 @@ export default function Home() {
                 <div className="profile-pic-container" style={{ flexShrink: 0 }}>
                   {/* Replace this with your actual profile image */}
                   <img 
-                    src="/images/pixelated-earth-planet-clouds.png" 
+                    src="/images/pixelated-earth-planet-clouds.webp" 
                     alt="Sienna's profile picture"
                     className="profile-pic"
                   />
@@ -187,7 +187,7 @@ export default function Home() {
                 style={{
                   marginTop: '0.75rem',
                   height: '120px',
-                  backgroundImage: "url('/images/aero-fish.png')",
+                  backgroundImage: "url('/images/aero-fish.webp')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'center'
                 }}

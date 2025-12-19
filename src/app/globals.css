@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url('/images/windows-xp-bliss.png');
+  background-image: url('/images/windows-xp-bliss.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -80,7 +80,7 @@ body.show-bubbles.fade-out::before {
 
 /* Banner image */
 .banner {
-  background-image: url('/images/bubble-tree-banner.png');
+  background-image: url('/images/bubble-tree-banner.webp');
   background-position: center top;
   background-size: cover;
   border: ridge white 10px;
@@ -98,7 +98,7 @@ body.show-bubbles.fade-out::before {
 
 .profile-pic-container::after {
   content: "";
-  background: url('/images/cd-outline.png'), 
+  background: url('/images/cd-outline.webp'), 
               linear-gradient(150deg, rgba(255,255,255,0.4), rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.6));
   background-size: 100% 100%, cover;
   position: absolute;
@@ -111,7 +111,7 @@ body.show-bubbles.fade-out::before {
 
 .profile-pic-container::before {
   content: "";
-  background: url('/images/cd.png');
+  background: url('/images/cd.webp');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
