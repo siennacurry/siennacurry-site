@@ -167,8 +167,8 @@ export default function Home() {
               </div>
               
               <div style={{ marginBottom: '0.75rem' }}>
-                <a href="/projects" style={{ fontWeight: 'bold' }}>Data Analysis of Some Sort</a>
-                <p style={{ fontSize: '0.75rem', color: '#666' }}>TBD</p>
+                <a href="/projects" style={{ fontWeight: 'bold' }}>Nomie</a>
+                <p style={{ fontSize: '0.75rem', color: '#666' }}>AI-Powered Screentime App</p>
               </div>
 
                 <p style={{ marginTop: '0.75rem' }}>
