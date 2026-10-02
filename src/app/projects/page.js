@@ -11,6 +11,13 @@ const projects = [
     image: "/images/cuddle-coo-project-image.webp",
   },
   {
+    title: "Hotel Loyalty Fraud Detection",
+    description: "An in-progress machine learning project for Wyndham Hotels & Resorts, the world's largest hotel franchisor, as part of the Break Through Tech AI/ML Fellowship with Cornell Tech. I'm building an XGBoost classifier to flag members who book rooms with no intent to stay, just to collect loyalty points. The model uses signals like no-shows, late cancellations, account age, and reused contact information.",
+    technologies: ["Python", "pandas", "scikit-learn", "XGBoost"],
+    linkLabel: "Link TBD",
+    image: "/images/wyndham-project-image.webp",
+  },
+  {
     title: "siennacurry.me",
     description: "A personal portfolio website with a retro Y2K/Windows XP-inspired aesthetic. Designed in Figma and built from scratch using React and Next.js, featuring custom CSS styling to recreate the nostalgic look of early 2000s social media profiles. The site showcases my projects, skills, and contact information with a responsive two-column layout. Deployed on Vercel with a custom domain.",
     technologies: ["React", "Next.js", "TailwindCSS", "Vercel"],
@@ -68,7 +75,7 @@ const projects = [
                     {project.technologies.join(", ")}
                   </div>
 
-                  {project.link && (
+                  {project.link ? (
                     <a
                       href={project.link}
                       target="_blank"
@@ -77,6 +84,8 @@ const projects = [
                     >
                       [{project.linkLabel || "View on GitHub"} →]
                     </a>
+                  ) : project.linkLabel && (
+                    <span style={{ color: '#666' }}>[{project.linkLabel}]</span>
                   )}
                 </div>
               </div>

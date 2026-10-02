@@ -167,6 +167,13 @@ export default function Home() {
               </div>
 
               <div style={{ marginBottom: '0.75rem' }}>
+                <Link href="/projects" style={{ fontWeight: 'bold' }}>Hotel Loyalty Fraud Detection</Link>
+                <p style={{ fontSize: '0.75rem', color: '#666' }}>
+                  Machine learning model to catch loyalty points fraud.
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '0.75rem' }}>
                 <Link href="/projects" style={{ fontWeight: 'bold' }}>siennacurry.me</Link>
                 <p style={{ fontSize: '0.75rem', color: '#666' }}>
                   Windows XP-inspired portfolio website showcasing my projects.
