@@ -55,7 +55,7 @@ export default function Home() {
             <div className="panel-body">
               <div style={{ display: 'flex', gap: '0.75rem' }}>
                 {/* Profile Picture with CD effect */}
-                <div className="profile-pic-container" style={{ flexShrink: 0 }}>
+                <div className="profile-pic-container" style={{ flexShrink: 0, alignSelf: 'center' }}>
                   {/* Replace this with your actual profile image */}
                   <img 
                     src="/images/pixelated-earth-planet-clouds.webp" 
@@ -68,6 +68,7 @@ export default function Home() {
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   <p style={{ fontWeight: 'bold', fontSize: '0.875rem' }}>Sienna Curry</p>
                   <p style={{ fontSize: '0.75rem', color: '#666' }}>CS + Linguistics @ UCLA</p>
+                  <p style={{ fontSize: '0.75rem', color: '#666' }}>Prev. PM Intern @ U.S. Bank</p>
                 {/* MSN Buddy Icon */}
                   <img 
                     src="/images/blue-duo-spinning.gif" 
