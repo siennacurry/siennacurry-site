@@ -160,15 +160,17 @@ export default function Home() {
               <p className="accent-red" style={{ marginBottom: '0.5rem' }}>Featured Projects:</p>
               
               <div style={{ marginBottom: '0.75rem' }}>
-                <a href="/projects" style={{ fontWeight: 'bold' }}>siennacurry.me</a>
+                <Link href="/projects" style={{ fontWeight: 'bold' }}>Cuddles &amp; Coo Website Rebuild</Link>
+                <p style={{ fontSize: '0.75rem', color: '#666' }}>
+                  Nonprofit website rebuild for low-income mothers and families.
+                </p>
+              </div>
+
+              <div style={{ marginBottom: '0.75rem' }}>
+                <Link href="/projects" style={{ fontWeight: 'bold' }}>siennacurry.me</Link>
                 <p style={{ fontSize: '0.75rem', color: '#666' }}>
                   Windows XP-inspired portfolio website showcasing my projects.
                 </p>
-              </div>
-              
-              <div style={{ marginBottom: '0.75rem' }}>
-                <a href="/projects" style={{ fontWeight: 'bold' }}>Data Analysis of Some Sort</a>
-                <p style={{ fontSize: '0.75rem', color: '#666' }}>TBD</p>
               </div>
 
                 <p style={{ marginTop: '0.75rem' }}>
@@ -196,7 +198,7 @@ export default function Home() {
       {/* Footer */}
       <footer style={{ marginTop: '1.5rem', textAlign: 'center', color: 'white' }}>
         <p style={{ textShadow: '2px 2px 0px rgba(0,0,0,0.8)', fontSize: '0.875rem' }}>
-          © 2025 Sienna Curry
+          © {new Date().getFullYear()} Sienna Curry
         </p>
       </footer>
     </main>

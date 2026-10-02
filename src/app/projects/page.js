@@ -1,23 +1,21 @@
 import Link from "next/link";
 
 export default function Projects() {
-  // Replace this with my actual projects
 const projects = [
+  {
+    title: "Cuddles & Coo Website Rebuild",
+    description: "A full rebuild of the website for Cuddles & Coo, a childcare nonprofit serving 500+ low-income mothers and families, through Develop for Good. As technical product manager, I led a team of 6 volunteer engineers, interviewed donors, families, and staff, and narrowed the feature list from 24 to 9 to focus on donations and intake.",
+    technologies: ["Product Management", "User Research", "Figma", "Jira", "Wix"],
+    link: "https://www.cuddlesandcoo.org/",
+    linkLabel: "Visit Live Site",
+    image: "/images/cuddle-coo-project-image.webp",
+  },
   {
     title: "siennacurry.me",
     description: "A personal portfolio website with a retro Y2K/Windows XP-inspired aesthetic. Designed in Figma and built from scratch using React and Next.js, featuring custom CSS styling to recreate the nostalgic look of early 2000s social media profiles. The site showcases my projects, skills, and contact information with a responsive two-column layout. Deployed on Vercel with a custom domain.",
-    technologies: ["React", "Next.js", "TailwindCSS, Vercel, Figma"],
+    technologies: ["React", "Next.js", "TailwindCSS", "Vercel"],
     link: "https://github.com/siennacurry/siennacurry-site",
     image: "/images/project1.webp",
-    imageWidth: "50%"
-  },
-  {
-    title: "Upcoming Data Analysis Project", 
-    description: "Come back later for more!",
-    technologies: ["TBD"],
-    link: "https://github.com/siennacurry",
-    image: "https://t3.ftcdn.net/jpg/13/75/00/24/360_F_1375002409_EqrjU2D0FGjW8OrkHretImodxhJ0McFv.jpg",
-    imageWidth: "50%"
   },
 ];
 
@@ -44,20 +42,23 @@ const projects = [
             <div className="panel-body">
               <div className="flex flex-col md:flex-row gap-4">
                 {/* Project Image */}
-                <div className="md:w-1/3 flex-shrink-0">
-<img 
-  src={project.image}
-  alt={`${project.title} screenshot`}
-  className="project-image"
-  style={{
-    width: project.imageWidth || '100%',
-    height: 'auto',
-    display: 'block',
-    margin: '0 auto'
-  }}
-/>
-                </div>
-                
+                {project.image && (
+                  <div className="md:w-1/3 flex-shrink-0">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      className="project-image"
+                      style={{
+                        width: '100%',
+                        maxWidth: '240px',
+                        height: 'auto',
+                        display: 'block',
+                        margin: '0 auto'
+                      }}
+                    />
+                  </div>
+                )}
+
                 {/* Project Details */}
                 <div className="flex-1">
                   <p className="mb-3">{project.description}</p>
@@ -66,15 +67,17 @@ const projects = [
                     <span className="accent-red">Technologies: </span>
                     {project.technologies.join(", ")}
                   </div>
-                  
-                      <a 
+
+                  {project.link && (
+                    <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="accent-red"
-                      >
-                    [View on GitHub →]
-                  </a>
+                    >
+                      [{project.linkLabel || "View on GitHub"} →]
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
@@ -85,7 +88,7 @@ const projects = [
       {/* Footer */}
       <footer style={{ marginTop: '1.5rem', textAlign: 'center', color: 'white' }}>
         <p style={{ textShadow: '2px 2px 0px rgba(0,0,0,0.8)', fontSize: '0.875rem' }}>
-          © 2025 Sienna Curry
+          © {new Date().getFullYear()} Sienna Curry
         </p>
       </footer>
     </main>
