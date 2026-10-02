@@ -108,6 +108,31 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Last Seen At Section */}
+          <div className="panel">
+            <div className="panel-header">
+              <h2 style={{ fontSize: '0.875rem' }}>Last Seen At</h2>
+            </div>
+            <div className="panel-body" style={{ fontSize: '0.875rem' }}>
+              <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+                <img
+                  src="/images/us-bank-logo.webp"
+                  alt="U.S. Bank logo"
+                  style={{ width: '96px', height: 'auto', borderRadius: '4px', flexShrink: 0 }}
+                />
+                <div>
+                  <p style={{ fontWeight: 'bold' }}>Product Management Intern</p>
+                  <p style={{ fontSize: '0.75rem', color: '#666' }}>
+                    <a href="https://www.usbank.com/about-us-bank.html" target="_blank" rel="noopener noreferrer">
+                      U.S. Bank
+                    </a>
+                    {" | Banker Experience Evolution"}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         {/* Skills Section */}
         <div className="panel">
           <div className="panel-header">
