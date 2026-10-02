@@ -39,7 +39,6 @@ body {
 @keyframes bubbles-fade-out {
   to {
     opacity: 0;
-    visibility: hidden;
   }
 }
 

@@ -1,10 +1,11 @@
 import Link from "next/link";
+import BubblesOverlay from "./BubblesOverlay";
 
 export default function Home() {
   return (
     <main style={{ maxWidth: '800px', margin: '0 auto', padding: '1rem' }}>
-      {/* Bubbles overlay - fades out on its own via CSS (see globals.css) */}
-      <div className="bubbles-overlay" aria-hidden="true"></div>
+      {/* Bubbles overlay - added after page load, fades out via CSS */}
+      <BubblesOverlay />
 
       {/* Banner Image */}
       <div className="banner" style={{ marginBottom: '1rem' }}></div>
@@ -29,6 +30,8 @@ export default function Home() {
                     src="/images/pixelated-earth-planet-clouds.webp" 
                     alt="Sienna's profile picture"
                     className="profile-pic"
+                    width={163}
+                    height={163}
                   />
                 </div>
                 
@@ -42,6 +45,8 @@ export default function Home() {
                     src="/images/blue-duo-spinning.webp" 
                     alt="MSN icon"
                     className="msn-icon"
+                    width={50}
+                    height={50}
                     style={{ marginTop: '0.5rem' }}
                   />
                 </div>
@@ -86,6 +91,8 @@ export default function Home() {
                 <img
                   src="/images/us-bank-logo.webp"
                   alt="U.S. Bank logo"
+                  width={96}
+                  height={54}
                   style={{ width: '96px', height: 'auto', borderRadius: '4px', flexShrink: 0 }}
                 />
                 <div>
