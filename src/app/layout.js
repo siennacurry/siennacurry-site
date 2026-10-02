@@ -93,6 +93,28 @@ export default function RootLayout({ children }) {
             gap: 1rem;
             align-items: start;
           }
+          .home-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          }
+          @media (max-width: 768px) {
+            .two-column-grid {
+              grid-template-columns: 1fr;
+            }
+            /* Flatten both columns into one list so boxes can be reordered */
+            .home-column {
+              display: contents;
+            }
+            /* Mobile order: Welcome, Contact, About Me, Last Seen At, Projects, Skills */
+            .last-seen-panel,
+            .projects-panel {
+              order: 1;
+            }
+            .skills-panel {
+              order: 2;
+            }
+          }
         `}} />
       </head>
       <body className="min-h-screen p-4 md:p-8">

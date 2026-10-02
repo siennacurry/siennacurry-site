@@ -14,7 +14,7 @@ export default function Home() {
       <div className="two-column-grid">
         
         {/* Left Column */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        <div className="home-column">
           
           {/* Profile Section */}
           <div className="panel">
@@ -81,8 +81,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Last Seen At Section */}
-          <div className="panel">
+          {/* Last Seen At Section - moved below About Me on mobile (see layout.js) */}
+          <div className="panel last-seen-panel">
             <div className="panel-header">
               <h2 style={{ fontSize: '0.875rem' }}>Last Seen At</h2>
             </div>
@@ -108,8 +108,8 @@ export default function Home() {
             </div>
           </div>
 
-        {/* Skills Section */}
-        <div className="panel">
+        {/* Skills Section - moved to the end on mobile (see layout.js) */}
+        <div className="panel skills-panel">
           <div className="panel-header">
             <h2 style={{ fontSize: '0.875rem' }}>Skills</h2>
           </div>
@@ -130,7 +130,7 @@ export default function Home() {
       </div>
 
         {/* Right Column */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        <div className="home-column">
           
           {/* About Me Section */}
           <div className="panel">
@@ -153,7 +153,7 @@ export default function Home() {
           </div>
 
           {/* Projects Section */}
-          <div className="panel">
+          <div className="panel projects-panel">
             <div className="panel-header">
               <h2 style={{ fontSize: '0.875rem' }}>Projects</h2>
             </div>
