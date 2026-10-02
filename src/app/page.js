@@ -1,43 +1,11 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-  // For Chrome/Safari/Edge
-  const style = document.createElement('style');
-  style.id = 'hide-scrollbar';
-  style.textContent = `html::-webkit-scrollbar { display: none; }`;
-  document.head.appendChild(style);
-
-  // Show bubbles on load
-  document.body.classList.add('show-bubbles');
-
-  // Start fading out after 10 seconds
-  const fadeTimer = setTimeout(() => {
-    document.body.classList.add('fade-out');
-  }, 3000);
-
-  // Fully remove bubbles after fade completes (10s + 2s fade)
-  const removeTimer = setTimeout(() => {
-    document.body.classList.remove('show-bubbles', 'fade-out');
-  }, 5000);
-  
-  // Cleanup when leaving the page
-  return () => {
-    document.documentElement.style.scrollbarWidth = "";
-    document.body.style.msOverflowStyle = "";
-    const styleEl = document.getElementById('hide-scrollbar');
-    if (styleEl) styleEl.remove();
-    document.body.classList.remove('show-bubbles', 'fade-out');
-    clearTimeout(fadeTimer);
-    clearTimeout(removeTimer);
-  };
-}, []);
-
   return (
     <main style={{ maxWidth: '800px', margin: '0 auto', padding: '1rem' }}>
+      {/* Bubbles overlay - fades out on its own via CSS (see globals.css) */}
+      <div className="bubbles-overlay" aria-hidden="true"></div>
+
       {/* Banner Image */}
       <div className="banner" style={{ marginBottom: '1rem' }}></div>
 
@@ -71,7 +39,7 @@ export default function Home() {
                   <p style={{ fontSize: '0.75rem', color: '#666' }}>Prev. PM Intern @ U.S. Bank</p>
                 {/* MSN Buddy Icon */}
                   <img 
-                    src="/images/blue-duo-spinning.gif" 
+                    src="/images/blue-duo-spinning.webp" 
                     alt="MSN icon"
                     className="msn-icon"
                     style={{ marginTop: '0.5rem' }}
@@ -126,7 +94,7 @@ export default function Home() {
                     <a href="https://www.usbank.com/about-us-bank.html" target="_blank" rel="noopener noreferrer">
                       U.S. Bank
                     </a>
-                    {" | Banker Experience Evolution"}
+                    {" | Summer 2026"}
                   </p>
                 </div>
               </div>

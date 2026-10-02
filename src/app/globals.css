@@ -22,10 +22,9 @@ body {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 
-/* Sparkle overlay - only shows when body has 'show-bubbles' class */
-body.show-bubbles::before {
-  background-image: url('/images/floating-bubbles.gif');
-  content: "";
+/* Bubbles overlay on the home page - shows for 3s, then fades out over 2s */
+.bubbles-overlay {
+  background-image: url('/images/floating-bubbles.webp');
   height: 300%;
   left: -50%;
   opacity: 0.2;
@@ -34,11 +33,14 @@ body.show-bubbles::before {
   width: 300%;
   pointer-events: none;
   z-index: 1000;
-  transition: opacity 2s ease-out;
+  animation: bubbles-fade-out 2s ease-out 3s forwards;
 }
 
-body.show-bubbles.fade-out::before {
-  opacity: 0;
+@keyframes bubbles-fade-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* Panel header styling */
