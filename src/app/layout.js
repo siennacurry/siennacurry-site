@@ -54,6 +54,10 @@ export default function RootLayout({ children }) {
           .gap-4 { gap: 1rem; }
           .items-center { align-items: center; }
           .justify-between { justify-content: space-between; }
+          @media (min-width: 48rem) {
+            .md\\:flex-row { flex-direction: row; }
+            .md\\:w-1\\/3 { width: 33.333333%; }
+          }
           .banner {
             background-color: #4a90c2;
             background-image: url('/images/bubble-tree-banner.webp');
