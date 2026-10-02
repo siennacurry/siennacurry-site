@@ -113,17 +113,17 @@ export default function Home() {
             <h2 style={{ fontSize: '0.875rem' }}>Skills</h2>
           </div>
           <div className="panel-body-beige" style={{ fontSize: '0.875rem' }}>
+            <div className="skill-category">Product</div>
+            <p className="skill-item" style={{ fontSize: '0.75rem' }}>PRDs, Roadmapping, User Research, A/B Testing, Jira, Figma</p>
+            
             <div className="skill-category">Languages</div>
-            <p className="skill-item" style={{ fontSize: '0.75rem' }}>C++, Python, JavaScript, HTML/CSS, SQL</p>
+            <p className="skill-item" style={{ fontSize: '0.75rem' }}>Python, C++, JavaScript, SQL, HTML/CSS</p>
             
             <div className="skill-category">Frameworks</div>
-            <p className="skill-item" style={{ fontSize: '0.75rem' }}>React, Next.js, Node.js, Express.js, NumPy, Pandas, Socket.io</p>
+            <p className="skill-item" style={{ fontSize: '0.75rem' }}>React, Next.js, Node.js, GraphQL, pandas, scikit-learn</p>
             
-            <div className="skill-category">Tools</div>
-            <p className="skill-item" style={{ fontSize: '0.75rem' }}>MongoDB, PostgreSQL, Git, AWS, Azure, Vercel, RESTful APIs</p>
-            
-            <div className="skill-category">Design</div>
-            <p style={{ fontSize: '0.75rem' }}>Figma, Adobe Creative Suite, UI/UX</p>
+            <div className="skill-category">Data & ML</div>
+            <p style={{ fontSize: '0.75rem' }}>XGBoost, Tableau, Google Analytics, Excel, PostgreSQL</p>
           </div>
         </div>
       </div>
@@ -141,8 +141,8 @@ export default function Home() {
                 Hi! I&apos;m Sienna, a Computer Science and Linguistics student at UCLA.
               </p>
               <p style={{ marginBottom: '0.5rem' }}>
-                I&apos;m passionate about software development, elegant design, and the
-                intersection between people and technology!
+              I build products at the intersection of people, language, and AI
+               — from LLM features for bankers to machine learning models for fraud detection.
               </p>
               <p>
                 When I&apos;m not coding, you can find me learning new languages or
